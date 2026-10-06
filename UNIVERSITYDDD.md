@@ -1,5 +1,5 @@
 
-1. Model the CourseEnrollment Aggregate Root
+## 1. Model the CourseEnrollment Aggregate Root
 In Domain‑Driven Design (DDD), the aggregate root is the central object that controls consistency and rules for related entities.
 
 Here, CourseEnrollment is the aggregate root because it manages the relationship between a course and its enrolled students.
@@ -10,7 +10,7 @@ Think of it as the “gatekeeper” — no student can be added or removed witho
 
 
 
-2. Enforce Invariant Limits
+## 2. Enforce Invariant Limits
 Invariants are rules that must always hold true in the system.
 
 For CourseEnrollment, examples include:
@@ -23,7 +23,7 @@ Consistency: Dropping a student should only be possible if they are already enro
 
 These invariants prevent invalid states (like over‑enrollment or ghost students) and keep the system trustworthy.
 
-3. Emit Domain Events
+## 3. Emit Domain Events
 Domain events capture important business happenings that other parts of the system may care about.
 
 Examples in CourseEnrollment:
@@ -36,7 +36,7 @@ These events allow other systems (like notifications, billing, or transcripts) t
 
 It makes the system more extensible and responsive to real‑world needs.
 
-DDD Diagram
+## DDD Diagram
 CourseEnrollment (Aggregate Root)
    ├── Course (Entity)
    ├── Student (Entity)
